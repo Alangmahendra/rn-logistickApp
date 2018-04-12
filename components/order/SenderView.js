@@ -36,6 +36,9 @@ class ReceiverView extends Component {
             <Ionicons name={'ios-call'} size={25} color={'indigo'} />
             <Input placeholder="Phone number" />
           </Item>
+          <Item>
+            <Input placeholder="Notes,instruction,location detail" />
+          </Item>
        
       </CollapsibleView>
     )

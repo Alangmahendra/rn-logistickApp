@@ -1,23 +1,24 @@
 import React, {Component} from 'react';
-import {Container, Text, View, Card, CardItem, Body} from 'native-base';
+import {Container, Text, View, Card, CardItem, Body, Icon, Button} from 'native-base';
 import {StyleSheet} from "react-native";
+import { Ionicons } from '@expo/vector-icons'
 
 class PackagePhotoCard extends Component {
   render() {
     return (
       <Card>
         <CardItem>
-          <Body style={{backgroundColor: 'blue', flex:1}}>
+          <Body>
           <View style={styles.wrapper}>
             <View style={{flex: 1}}>
               <Text>
-                Text2
+                Your Package Photo
               </Text>
             </View>
             <View>
-              <Text>
-                Buttonx
-              </Text>
+              <Button transparent>
+              <Ionicons name={'ios-add-circle'} size={30} color={'indigo'} />
+              </Button>
             </View>
           </View>
           </Body>
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     // justifyContent: 'space-around',
-    backgroundColor: 'red'
+    // backgroundColor: 'red'
   }
 
 });

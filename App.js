@@ -11,7 +11,6 @@ const AppNavigator = StackNavigator({
   confirmOrder: {
     screen: ConfirmOrderScreen,
     navigationOptions: {
-      // headerTitle: 'Episode Detail',
       headerTitle: 'Confirm Order'
     }
   },
@@ -19,7 +18,6 @@ const AppNavigator = StackNavigator({
     screen: PickupLocationScreen,
     navigationOptions: {
       headerTitle: 'Pickup Location',
-      // header: 'Pickup Location'
     }
   },
 

@@ -9,13 +9,21 @@ import DestinationReceiverCard from '../order/DestinationReceiverCard'
 import BottomSheet from '../order/BottomSheet'
 
 class ConfirmOrderScreen extends Component {
+  constructor(props){
+    super(props)
+  }
+  componentDidMount(){
+    console.log('props on screen',this.props);
+    
+  }
   render() {
+    const {navigate} = this.props.navigation
     return (
       <Container style={styles.root}>
         <Content>
           <PackagePhotoCard />
           <DestinationReceiverCard />
-          <BottomSheet />
+          <BottomSheet navigate={navigate}/>
         </Content>
       </Container>
     )

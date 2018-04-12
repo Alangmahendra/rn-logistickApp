@@ -8,6 +8,13 @@ import SectionPaymentRadio from './SectionPaymentRadio'
 import SectionPrice from './SectionPrice'
 
 class BottomSheet extends Component {
+  constructor(props){
+    super(props)
+  }
+
+  componentDidMount(){
+    console.log('props on bottom shest',this.props)
+  }
   render() {
     return (
       <View style={styles.root}  elevation={10}>
@@ -15,7 +22,7 @@ class BottomSheet extends Component {
         <LineSpacer/>
         <SectionPaymentRadio />
         <LineSpacer/>
-        <SectionPayWith />
+        <SectionPayWith navigate={this.props}/>
       </View>
     )
   }

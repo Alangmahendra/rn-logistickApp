@@ -9,24 +9,36 @@ import ButtonIconSelector from '../base/ButtonIconSelector'
    {
      title: 'Cash',
      value: 'cash',
-     iconName: 'ios-star'
+     iconName: 'ios-cash'
    },
    {
      title: 'Wallet',
      value: 'wallet',
-     iconName: 'ios-star'
+     iconName: 'ios-card'
    },
    {
      title: 'Billed',
      value: 'billed',
-     iconName: 'ios-star'
+     iconName: 'ios-sad'
    },
  ]
 
 class SectionPayWith extends Component {
+  constructor(props){
+    super(props)
+  }
+
+  componentDidMount(){
+    console.log('props di order paywith',this.props);
+  }
   handleOnChange = (value) => {
 
   }
+
+  onPress = () =>{
+    this.props.navigate.navigate('pickupLocation')
+  }
+
   render() {
     return (
       <View style={styles.root}>
@@ -35,8 +47,9 @@ class SectionPayWith extends Component {
           onChange={this.handleOnChange}
           items={items}
         />
-        <TouchableOpacity style={styles.mainButton}>
+        <TouchableOpacity style={styles.mainButton} onPress={this.onPress}>
           <Text style={styles.buttonText}>Order</Text>
+          {console.log('order tertekan')}
         </TouchableOpacity>
 
       </View>

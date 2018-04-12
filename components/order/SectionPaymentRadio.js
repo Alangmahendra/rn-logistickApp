@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import {StyleSheet} from 'react-native'
+import React, { Component } from 'react'
+import { StyleSheet } from 'react-native'
 import {
   Container,
   Text,
@@ -12,19 +12,29 @@ import {
 } from 'native-base'
 
 class SectionPaymentRadio extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      sender: false,
+      receiver: false
+    }
+  }
+
+
   render() {
+    const { sender, receiver } = this.state
     return (
       <View style={styles.root}>
         <Text style={styles.title}>Responsible for payment</Text>
         <View style={styles.radioWrapper}>
-          <View style={[styles.radioItem,{
+          <View style={[styles.radioItem, {
             marginRight: 15
           }]}>
-            <Radio style={styles.radio} selected={false}/>
+            <Radio style={styles.radio} selected={true} />
             <Text>Sender</Text>
           </View>
           <View style={styles.radioItem}>
-            <Radio style={styles.radio} selected={false}/>
+            <Radio style={styles.radio} selected={false} />
             <Text>Receiver</Text>
           </View>
         </View>
@@ -44,11 +54,11 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     flexDirection: 'row'
   },
-  radioItem:{
+  radioItem: {
     // backgroundColor:'red',
     flexDirection: 'row'
   },
-  radio:{
+  radio: {
     marginRight: 7
   },
   title: {
