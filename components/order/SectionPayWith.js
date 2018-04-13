@@ -28,9 +28,6 @@ class SectionPayWith extends Component {
     super(props)
   }
 
-  componentDidMount(){
-    console.log('props di order paywith',this.props);
-  }
   handleOnChange = (value) => {
 
   }
@@ -49,7 +46,6 @@ class SectionPayWith extends Component {
         />
         <TouchableOpacity style={styles.mainButton} onPress={this.onPress}>
           <Text style={styles.buttonText}>Order</Text>
-          {console.log('order tertekan')}
         </TouchableOpacity>
 
       </View>

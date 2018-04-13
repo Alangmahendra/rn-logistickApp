@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {TouchableOpacity, View, StyleSheet, Alert} from 'react-native'
+import {TouchableOpacity, View, StyleSheet,} from 'react-native'
 import {Text, Icon} from 'native-base'
 
 class ButtonIconSelector extends Component {

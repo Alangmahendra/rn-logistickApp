@@ -1,13 +1,18 @@
 import React, {Component} from 'react';
 import {StyleSheet} from "react-native";
-import {Text, View} from 'native-base';
+import Searchbar from '../pickup/searchBar'
+import Location from '../pickup/defaultPickupLocation'
+import { Container, Text, View, Content } from 'native-base'
 
 class PickupLocationScreen extends Component {
   render() {
     return (
-      <View style={styles.root}>
-        <Text>PickupLocation Screen</Text>
-      </View>
+      <Container>
+        <Content>
+          <Searchbar style={styles.wrapper}/>
+          <Location />
+        </Content>
+      </Container>
     );
   }
 }
@@ -16,10 +21,11 @@ class PickupLocationScreen extends Component {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
+  wrapper:{
+    flex: 1,
+    marginBottom:'30px'
+  }
 });
 
 export default PickupLocationScreen;
